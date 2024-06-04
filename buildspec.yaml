@@ -61,3 +61,9 @@ phases:
 artifacts:
   files:
     - appspec.yaml
+    - trivyimage.txt
+    - trivyfilescan.txt
+    - dependency-check*
+  excluded-paths:
+    - '*.sh'
+    - '*.bat'
