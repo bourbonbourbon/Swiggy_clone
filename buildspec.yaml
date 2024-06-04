@@ -8,6 +8,8 @@ env:
     SONAR_TOKEN: /cicd/sonar/sonar-token
     SONAR_SERVER_IP: /cicd/sonar/ipaddr
     OWASP_API_KEY: /cicd/owasp_api
+    REGION: /cicd/region
+    EMAIL: /cicd/email
 phases:
   install:
     runtime-versions:
@@ -49,11 +51,11 @@ phases:
       - echo "Running SonarQube analysis result"
       - sonar-scanner -Dsonar.projectKey=swiggy -Dsonar.sources=. -Dsonar.host.url=http://$SONAR_SERVER_IP:9000/ -Dsonar.token=$SONAR_TOKEN
       # - aws ses send-email:
-      #     from: ""
-      #     to: ""
+      #     from: "$EMAIL"
+      #     to: "$EMAIL"
       #     subject: "CodeBuild Status: $CODEBUILD_BUILD_ID"
       #     text: "Build status: $CODEBUILD_BUILD_STATUS"
-      #     region: ""
+      #     region: "$REGION"
 
 
 artifacts:
