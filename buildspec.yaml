@@ -8,8 +8,8 @@ env:
     SONAR_TOKEN: /cicd/sonar/sonar-token
     SONAR_SERVER_IP: /cicd/sonar/ipaddr
     OWASP_API_KEY: /cicd/owasp_api
-    REGION: /cicd/region
-    EMAIL: /cicd/email
+    # REGION: /cicd/region
+    # EMAIL: /cicd/email
 phases:
   install:
     runtime-versions:
