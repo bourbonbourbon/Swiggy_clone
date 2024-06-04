@@ -63,7 +63,8 @@ artifacts:
     - appspec.yaml
     - trivyimage.txt
     - trivyfilescan.txt
-    - dependency-check*
+    - ./dependency-check/dependency-check*
   excluded-paths:
     - '*.sh'
     - '*.bat'
+    - '*.zip'
